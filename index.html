@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIb - The Future of Programming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">LI<span>b</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#playground">Playground</a></li>
+                <li><a href="#docs" class="cta-button">Documentation</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">LI</span><span class="title-b">b</span>
+                <span class="title-subtitle">The Future of Programming</span>
+            </h1>
+            <p class="hero-description">
+                Experience unparalleled performance with the simplicity of natural language.
+                LIb reimagines programming for the next generation of developers.
+            </p>
+            <div class="hero-actions">
+                <button class="primary-button" onclick="scrollToSection('playground')">
+                    Try LIb Online
+                    <div class="button-shimmer"></div>
+                </button>
+                <button class="secondary-button" onclick="scrollToSection('docs')">
+                    Read Docs
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">15ms</span>
+                    <span class="stat-label">Compile Time</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3x</span>
+                    <span class="stat-label">Faster</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0 bugs</span>
+                    <span class="stat-label">Type Safety</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-code-preview">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="window-buttons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="window-title">main.lib</span>
+                </div>
+                <div class="code-content">
+                    <pre><code><span class="keyword">create</span> app <span class="keyword">using</span> lib/app
+
+<span class="keyword">define</span> <span class="function">greet</span>(<span class="variable">name</span>):
+    <span class="keyword">return</span> "Hello, " + <span class="variable">name</span> + "!"
+
+<span class="keyword">when</span> <span class="variable">request</span> <span class="keyword">comes to</span> "/":
+    <span class="keyword">respond with</span> <span class="function">greet</span>(<span class="string">"world"</span>)
+
+<span class="keyword">start</span> app <span class="keyword">on port</span> 3000</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Why LIb?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Compiles to native machine code with zero-cost abstractions and advanced optimization techniques.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7l-10-5z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Memory Safe</h3>
+                    <p>Automatic memory management with compile-time bounds checking. No segfaults, ever.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1v6m0 6v6m11-11h-6m-6 0H1m20.4 7.4l-4.2-4.2M7.8 7.8L3.6 3.6m17 4.2L15.4 3.4M7.8 16.2L3.6 20.4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Natural Syntax</h3>
+                    <p>Reads like English, writes like prose. Your team will love the intuitive language design.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 2h10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 10h6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 14h6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Write once, run anywhere. From microcontrollers to server clusters, LIb has you covered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="syntax">
+        <div class="container">
+            <h2 class="section-title">Expressive Syntax</h2>
+            <p class="section-subtitle">Code that reads like natural language</p>
+            <div class="syntax-showcase">
+                <div class="syntax-tabs">
+                    <button class="tab-button active" data-tab="basics">Basics</button>
+                    <button class="tab-button" data-tab="functions">Functions</button>
+                    <button class="tab-button" data-tab="async">Async</button>
+                    <button class="tab-button" data-tab="types">Types</button>
+                </div>
+                <div class="syntax-content">
+                    <div class="syntax-pane active" id="basics">
+                        <div class="code-comparison">
+                            <div class="code-block">
+                                <h4>Other Languages</h4>
+                                <pre><code>const userList = users.filter(user => 
+    user.age >= 18 && 
+    user.verified === true
+).map(user => user.name)</code></pre>
+                            </div>
+                            <div class="divider">
+                                <span>→</span>
+                            </div>
+                            <div class="code-block lib">
+                                <h4>LIb</h4>
+                                <pre><code><span class="keyword">get</span> userList <span class="keyword">from</span> users
+    <span class="keyword">where</span> age >= 18 
+    <span class="keyword">and</span> verified
+    <span class="keyword">select</span> <span class="variable">name</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="syntax-pane" id="functions">
+                        <div class="code-comparison">
+                            <div class="code-block">
+                                <h4>Traditional</h4>
+                                <pre><code>function calculateTotal(items) {
+    let total = 0;
+    for (let item of items) {
+        total += item.price * item.quantity;
+    }
+    return total;
+}</code></pre>
+                            </div>
+                            <div class="divider">
+                                <span>→</span>
+                            </div>
+                            <div class="code-block lib">
+                                <h4>LIb</h4>
+                                <pre><code><span class="keyword">define</span> <span class="function">calculateTotal</span>(<span class="variable">items</span>):
+    <span class="keyword">reduce</span> items <span class="keyword">to</span> total
+        <span class="keyword">add</span> (<span class="variable">price</span> * <span class="variable">quantity</span>) <span class="keyword">from each</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More syntax panes for async and types -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="examples">
+        <div class="container">
+            <h2 class="section-title">Real-World Examples</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>Web API</h3>
+                    <div class="example-content">
+                        <pre><code><span class="keyword">create</span> server <span class="keyword">using</span> lib/http
+
+<span class="keyword">define</span> <span class="function">handleLogin</span>(<span class="variable">email</span>, <span class="variable">password</span>):
+    <span class="variable">user</span> = <span class="keyword">find</span> user <span class="keyword">where</span> email == <span class="variable">email</span>
+    <span class="keyword">if</span> <span class="function">verifyPassword</span>(<span class="variable">password</span>, <span class="variable">user.hash</span>):
+        <span class="keyword">return</span> <span class="function">createToken</span>(<span class="variable">user</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">throw</span> <span class="string">"Invalid credentials"</span>
+
+server.<span class="function">post</span>(<span class="string">"/login"</span>, <span class="function">handleLogin</span>)
+server.<span class="function">start</span>(<span class="number">3000</span>)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="playground">
+        <div class="container">
+            <h2 class="section-title">Try LIb Online</h2>
+            <p class="section-subtitle">Write and execute LIb code instantly in your browser</p>
+            <div class="playground-container">
+                <div class="playground-editor">
+                    <div class="editor-header">
+                        <div class="editor-tabs">
+                            <div class="tab active">main.lib</div>
+                        </div>
+                        <button class="run-button" onclick="runCode()">
+                            Run Code
+                            <span class="run-icon">▶</span>
+                        </button>
+                    </div>
+                    <div class="editor-content">
+                        <textarea id="code-editor" placeholder="Write your LIb code here...">create app using lib/app
+
+when request comes to "/":
+    message = "Hello from LIb!"
+    respond with {
+        greeting: message,
+        timestamp: now()
+    }
+
+start app on port 8080</textarea>
+                    </div>
+                </div>
+                <div class="playground-output">
+                    <div class="output-header">
+                        <span>Output</span>
+                        <button class="clear-button" onclick="clearOutput()">Clear</button>
+                    </div>
+                    <div class="output-content" id="output-display">
+                        <div class="output-placeholder">
+                            Click "Run Code" to see output
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">LIb</div>
+                    <p>Programming language for the next generation</p>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/lib-lang">GitHub</a>
+                    <a href="https://discord.lib-lang.org">Discord</a>
+                    <a href="mailto:hello@lib-lang.org">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
